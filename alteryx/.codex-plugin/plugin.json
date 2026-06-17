@@ -1,0 +1,43 @@
+{
+  "name": "alteryx",
+  "version": "0.1.0",
+  "description": "Use AI to build, inspect, run, and repair trusted Alteryx Designer workflows for repeatable business analysis.",
+  "author": {
+    "name": "Alteryx",
+    "email": "support@alteryx.com",
+    "url": "https://www.alteryx.com/"
+  },
+  "homepage": "https://git.alteryx.com/tempo2/alteryx-skills",
+  "repository": "https://git.alteryx.com/tempo2/alteryx-skills",
+  "license": "UNLICENSED",
+  "keywords": [
+    "alteryx",
+    "designer",
+    "workflow",
+    "analytics"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Alteryx",
+    "shortDescription": "Build and run trusted Designer workflows",
+    "longDescription": "Use Alteryx Designer as the trusted execution layer behind AI-assisted analytics. Build, inspect, run, and repair workflows for data preparation, reconciliation, compliance reporting, operational analytics, governed calculations, and other repeatable business processes while keeping logic visible, reusable, and auditable.",
+    "developerName": "Alteryx",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://www.alteryx.com/",
+    "privacyPolicyURL": "https://www.alteryx.com/privacy-policy",
+    "termsOfServiceURL": "https://www.alteryx.com/terms-and-conditions",
+    "defaultPrompt": [
+      "Inspect this local Alteryx workflow.",
+      "Build a Designer workflow from these files.",
+      "Run and repair my local workflow."
+    ],
+    "brandColor": "#006FE5",
+    "composerIcon": "./assets/alteryx.svg",
+    "logo": "./assets/alteryx.svg",
+    "screenshots": []
+  }
+}

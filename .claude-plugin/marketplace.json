@@ -1,0 +1,15 @@
+{
+  "name": "alteryx",
+  "description": "Marketplace for Alteryx plugins that expose trusted workflow authoring and execution to AI-native tools.",
+  "owner": {
+    "name": "Alteryx",
+    "email": "support@alteryx.com"
+  },
+  "plugins": [
+    {
+      "name": "alteryx",
+      "source": "./alteryx",
+      "description": "AI-assisted Alteryx Designer workflow authoring and execution for governed, repeatable business analysis."
+    }
+  ]
+}
