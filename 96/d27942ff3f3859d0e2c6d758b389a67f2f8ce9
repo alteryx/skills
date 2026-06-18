@@ -1,0 +1,35 @@
+LICENSE
+  s_78a2823184e1c2::t_a2638c7ffb299b 1-186
+README.md
+  s_78a2823184e1c2::t_a2638c7ffb299b 4,16,23,29,36,90-110
+alteryx/.codex-plugin/plugin.json
+  s_78a2823184e1c2::t_a2638c7ffb299b 10-12
+NOTICE
+  s_78a2823184e1c2::t_a2638c7ffb299b 1-14
+GOVERNANCE.md
+  s_78a2823184e1c2::t_a2638c7ffb299b 1-37
+TRADEMARKS.md
+  s_78a2823184e1c2::t_a2638c7ffb299b 1-32
+SECURITY.md
+  s_78a2823184e1c2::t_a2638c7ffb299b 1-27
+CONTRIBUTING.md
+  s_78a2823184e1c2::t_a2638c7ffb299b 1-46
+MAINTENANCE.md
+  s_78a2823184e1c2::t_a2638c7ffb299b 1-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "96d27942ff3f3859d0e2c6d758b389a67f2f8ce9",
+  "prompts": {},
+  "sessions": {
+    "s_78a2823184e1c2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019edb8e-f757-7a12-bb99-7c8bff36db7e",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Dave Krill <dkrill@alteryx.com>"
+    }
+  }
+}
