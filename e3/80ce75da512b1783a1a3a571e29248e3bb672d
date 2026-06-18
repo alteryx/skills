@@ -1,0 +1,19 @@
+README.md
+  s_a3129e71ea92bf::t_73503ff60593e7 16,29,36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "e380ce75da512b1783a1a3a571e29248e3bb672d",
+  "prompts": {},
+  "sessions": {
+    "s_a3129e71ea92bf": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019edcc2-f8af-7d51-a582-d16ee0763032",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Dave Krill <dkrill@alteryx.com>"
+    }
+  }
+}
