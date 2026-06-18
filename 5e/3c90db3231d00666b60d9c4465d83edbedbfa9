@@ -1,0 +1,21 @@
+README.md
+  s_8907153275df8d::t_113ea9c113ec38 16,23,29,36
+alteryx/.codex-plugin/plugin.json
+  s_8907153275df8d::t_e017cdabdd06a7 10-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "5e3c90db3231d00666b60d9c4465d83edbedbfa9",
+  "prompts": {},
+  "sessions": {
+    "s_8907153275df8d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019edc46-e834-7200-a4bf-1a0d9dc36e65",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Dave Krill <dkrill@alteryx.com>"
+    }
+  }
+}
