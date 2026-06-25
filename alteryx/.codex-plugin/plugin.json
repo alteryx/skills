@@ -7,15 +7,10 @@
     "email": "support@alteryx.com",
     "url": "https://www.alteryx.com/"
   },
-  "homepage": "https://git.alteryx.com/tempo2/alteryx-skills",
-  "repository": "https://git.alteryx.com/tempo2/alteryx-skills",
-  "license": "UNLICENSED",
-  "keywords": [
-    "alteryx",
-    "designer",
-    "workflow",
-    "analytics"
-  ],
+  "homepage": "https://github.com/alteryx/skills",
+  "repository": "https://github.com/alteryx/skills",
+  "license": "Apache-2.0",
+  "keywords": ["alteryx", "designer", "workflow", "analytics"],
   "skills": "./skills/",
   "interface": {
     "displayName": "Alteryx",
@@ -23,10 +18,7 @@
     "longDescription": "Use Alteryx Designer as the trusted execution layer behind AI-assisted analytics. Build, inspect, run, and repair workflows for data preparation, reconciliation, compliance reporting, operational analytics, governed calculations, and other repeatable business processes while keeping logic visible, reusable, and auditable.",
     "developerName": "Alteryx",
     "category": "Productivity",
-    "capabilities": [
-      "Interactive",
-      "Write"
-    ],
+    "capabilities": ["Interactive", "Write"],
     "websiteURL": "https://www.alteryx.com/",
     "privacyPolicyURL": "https://www.alteryx.com/privacy-policy",
     "termsOfServiceURL": "https://www.alteryx.com/terms-and-conditions",

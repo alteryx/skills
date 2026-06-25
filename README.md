@@ -1,6 +1,7 @@
 # Alteryx Skills
 
 This repository packages the `alteryx` plugin for Codex, Antigravity, and Claude Code.
+The public repository is owned and maintained by the Ask Alteryx team.
 
 ## Features
 
@@ -12,27 +13,27 @@ This repository packages the `alteryx` plugin for Codex, Antigravity, and Claude
 ### Codex
 
 ```bash
-codex plugin marketplace add git@git.alteryx.com:tempo2/alteryx-skills.git
+codex plugin marketplace add alteryx/skills
 codex plugin add alteryx@alteryx
 ```
 
 ### Antigravity
 
 ```bash
-agy plugin install git@git.alteryx.com:tempo2/alteryx-skills.git
+agy plugin install https://github.com/alteryx/skills.git
 ```
 
 ### Claude Code
 
 ```bash
-claude plugin marketplace add git@git.alteryx.com:tempo2/alteryx-skills.git
+claude plugin marketplace add alteryx/skills
 claude plugin install alteryx@alteryx
 ```
 
 ### Skills Only
 
 ```bash
-npx skills add git@git.alteryx.com:tempo2/alteryx-skills.git
+npx skills add alteryx/skills
 ```
 
 ## Usage
@@ -86,3 +87,27 @@ Use `/alteryx:alteryx-designer` to invoke the Designer skill:
 ## Runtime Requirements
 
 Workflow execution requires a local Alteryx Designer installation with `AlteryxEngineCmd.exe`. Workflow inspection and XML editing can proceed without Designer, but run validation requires local Engine access.
+
+## License and Notices
+
+Repository materials are licensed under the Apache License, Version 2.0. See
+[LICENSE](LICENSE) and [NOTICE](NOTICE).
+
+Repository materials are provided on an "AS IS" basis, without warranties or
+conditions of any kind, express or implied.
+
+The license applies only to the materials in this repository. It does not grant
+rights to Alteryx products, hosted services, APIs, customer data, non-public
+documentation, trademarks, logos, or branding. See [TRADEMARKS.md](TRADEMARKS.md).
+
+Contributions are handled under the DCO-first process in
+[CONTRIBUTING.md](CONTRIBUTING.md). Security reports must follow
+[SECURITY.md](SECURITY.md). Repository ownership and maintenance expectations
+are documented in [GOVERNANCE.md](GOVERNANCE.md) and [MAINTENANCE.md](MAINTENANCE.md).
+
+## Product and Service Access
+
+These skills do not bypass Alteryx authentication, authorization, workspace
+controls, product terms, service terms, or entitlement checks. Users are
+responsible for using authorized Alteryx accounts, workspaces, products,
+services, and permissions.
