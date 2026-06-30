@@ -1,0 +1,32 @@
+.versionrc.json
+  s_4a47388fbf5a0c::t_9af101bee94779 1-22
+scripts/lib/release-utils.mjs
+  s_4a47388fbf5a0c::t_d5d9a066b27991 60,69-78
+  s_4a47388fbf5a0c::t_c3c108020f9f78 39-44,46
+  s_4a47388fbf5a0c::t_eddf1685ade139 9-12
+  s_4a47388fbf5a0c::t_3082bdb09ae414 79-80
+scripts/extract-release-notes.mjs
+  s_4a47388fbf5a0c::t_031485ed036700 1,3
+scripts/release-tag.mjs
+  s_4a47388fbf5a0c::t_a00d34ade335f8 1-11,17-24,27-31,49,51-56
+.claude-plugin/marketplace.json
+  s_4a47388fbf5a0c::t_0b7d2f85aab72c 11-16
+scripts/sync-manifest-versions.mjs
+  s_4a47388fbf5a0c::t_d0693cd546fed2 1-7,10-11,14-15,17-21,24-26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "8c7b76a7c15f85dcaebc8d2b496376398f4f220e",
+  "prompts": {},
+  "sessions": {
+    "s_4a47388fbf5a0c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "565517fa-4592-4ca2-97ad-944e9db72892",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Dave Krill <dkrill@alteryx.com>"
+    }
+  }
+}
