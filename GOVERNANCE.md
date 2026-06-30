@@ -3,7 +3,7 @@
 The Ask Alteryx team owns this public repository.
 
 Ask Alteryx maintainers are responsible for repository administration, public
-metadata, release decisions, issue and pull request triage, security escalation,
+metadata, release decisions, contribution review, security escalation,
 and lifecycle decisions.
 
 ## Maintainer Responsibilities
@@ -13,8 +13,8 @@ Maintainers must:
 - Keep repository ownership clear and current.
 - Require strong authentication for repository administration.
 - Review maintainer and administrator access periodically.
-- Triage public issues and pull requests for safety, correctness, brand risk,
-  and public-release suitability.
+- Review contributions for safety, correctness, brand risk, and public-release
+  suitability.
 - Coordinate with Alteryx Legal and Security when changes affect licensing,
   vulnerability handling, trademark use, public assets, or release posture.
 - Preserve a clear path for maintenance, archival, transfer, or deprecation.

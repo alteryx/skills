@@ -1,12 +1,15 @@
 # Contributing
 
-This repository is primarily a public distribution channel for Alteryx Skills.
-The Ask Alteryx team reviews changes for correctness, safety, licensing, and
-public-release suitability.
+This GitHub repository is a read-only public mirror and a public distribution
+channel for Alteryx Skills. Pull requests opened here are not accepted.
+Contributions are welcome, but the process is handled through Alteryx's
+canonical repository and is not public. The Ask Alteryx team reviews
+contributions for correctness, safety, licensing, and public-release
+suitability.
 
 ## Contribution License
 
-By intentionally submitting a contribution to this repository, you agree that
+By intentionally submitting a contribution to this project, you agree that
 your contribution is licensed under the Apache License, Version 2.0, unless a
 separate written agreement with Alteryx says otherwise.
 
@@ -44,3 +47,9 @@ Maintainers may close or decline contributions that are outside the repository
 scope, introduce unsafe defaults, rely on unauthorized material, weaken
 security guidance, confuse Alteryx branding, or are not suitable for public
 distribution.
+
+## Release Process
+
+Maintainers own versioning, changelog generation, protected semver tags, and
+GitHub Release publication. The release workflow is documented internally for
+maintainers of the canonical repository.

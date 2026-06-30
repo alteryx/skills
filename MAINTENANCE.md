@@ -13,7 +13,7 @@ public release for:
   assets.
 - Unsafe defaults, insecure examples, misleading claims, or unclear security
   boundaries.
-- Public issues and pull requests that require triage, escalation, or closure.
+- Contributions that require triage, escalation, or closure.
 - Branding, trademark, and official-repository trust risks.
 
 ## Public-Safety Review
