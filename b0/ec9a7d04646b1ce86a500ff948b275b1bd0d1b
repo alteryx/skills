@@ -1,0 +1,61 @@
+.github/workflows/github-release.yml
+  s_70ebb44bab0d6b::t_e924ee4092f72e 1-49
+scripts/release-tag.mjs
+  s_70ebb44bab0d6b::t_2ad8cc4f44d235 1-40
+.changeset/config.json
+  s_70ebb44bab0d6b::t_249ebb5a4ff854 1-20
+scripts/lib/release-utils.mjs
+  s_70ebb44bab0d6b::t_2ad8cc4f44d235 1-118
+GOVERNANCE.md
+  s_c10e88a61163a1::t_8c04829dc46b3b 16-17
+  s_c10e88a61163a1::t_d02b704d4954bb 6
+CONTRIBUTING.md
+  s_c10e88a61163a1::t_90eccdc4b4b118 3-8
+  s_c10e88a61163a1::t_69ba2e543d0c56 54-55
+  s_c10e88a61163a1::t_ea1c0961b457c5 12
+  s_70ebb44bab0d6b::t_cb482cda5e87f6 50-53
+package.json
+  s_c10e88a61163a1::t_ac13db906177ef 15-17
+  s_70ebb44bab0d6b::t_249ebb5a4ff854 1-14,18-26
+README.md
+  s_c10e88a61163a1::t_a2b3da4e7bd4c7 94-95
+  s_c10e88a61163a1::t_cdfc500d47eadb 109-110
+  s_70ebb44bab0d6b::t_cb482cda5e87f6 91-93,96
+scripts/extract-release-notes.mjs
+  s_70ebb44bab0d6b::t_2ad8cc4f44d235 1-6
+MAINTENANCE.md
+  s_c10e88a61163a1::t_be179a0ff31ac9 16
+scripts/sync-manifest-versions.mjs
+  s_c10e88a61163a1::t_c2b38912e58c07 1-15
+  s_70ebb44bab0d6b::t_2ad8cc4f44d235 16-38
+.gitignore
+  s_70ebb44bab0d6b::t_249ebb5a4ff854 13-15
+CHANGELOG.md
+  s_70ebb44bab0d6b::t_cb482cda5e87f6 1-11
+package-lock.json
+  s_70ebb44bab0d6b::t_814f940f293fc9 1-1385
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "b0ec9a7d04646b1ce86a500ff948b275b1bd0d1b",
+  "prompts": {},
+  "sessions": {
+    "s_70ebb44bab0d6b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f1673-350c-7180-b663-be9971e2e144",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Dave Krill <dkrill@alteryx.com>"
+    },
+    "s_c10e88a61163a1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6ba235c9-10a6-45b8-b22b-29d5ef726084",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Dave Krill <dkrill@alteryx.com>"
+    }
+  }
+}
