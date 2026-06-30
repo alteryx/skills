@@ -88,6 +88,12 @@ Use `/alteryx:alteryx-designer` to invoke the Designer skill:
 
 Workflow execution requires a local Alteryx Designer installation with `AlteryxEngineCmd.exe`. Workflow inspection and XML editing can proceed without Designer, but run validation requires local Engine access.
 
+## Releases
+
+Public releases use semver tags and are documented in [CHANGELOG.md](CHANGELOG.md).
+Maintainer release steps are maintained internally for maintainers of the
+canonical repository.
+
 ## License and Notices
 
 Repository materials are licensed under the Apache License, Version 2.0. See
@@ -100,7 +106,8 @@ The license applies only to the materials in this repository. It does not grant
 rights to Alteryx products, hosted services, APIs, customer data, non-public
 documentation, trademarks, logos, or branding. See [TRADEMARKS.md](TRADEMARKS.md).
 
-Contributions are handled under the DCO-first process in
+This GitHub repository is a read-only public mirror. Pull requests opened here
+are not accepted. Contributions are handled under the DCO-first process in
 [CONTRIBUTING.md](CONTRIBUTING.md). Security reports must follow
 [SECURITY.md](SECURITY.md). Repository ownership and maintenance expectations
 are documented in [GOVERNANCE.md](GOVERNANCE.md) and [MAINTENANCE.md](MAINTENANCE.md).

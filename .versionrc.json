@@ -1,0 +1,22 @@
+{
+  "packageFiles": [
+    { "filename": "alteryx/.claude-plugin/plugin.json", "type": "json" }
+  ],
+  "bumpFiles": [
+    { "filename": "alteryx/.claude-plugin/plugin.json", "type": "json" },
+    { "filename": "alteryx/.codex-plugin/plugin.json", "type": "json" }
+  ],
+  "header": "# alteryx-skills\n",
+  "types": [
+    { "type": "feat", "section": "Features" },
+    { "type": "fix", "section": "Bug Fixes" },
+    { "type": "perf", "section": "Performance" },
+    { "type": "docs", "section": "Documentation" },
+    { "type": "refactor", "section": "Refactoring" },
+    { "type": "build", "section": "Build & Tooling" },
+    { "type": "ci", "hidden": true },
+    { "type": "test", "hidden": true },
+    { "type": "chore", "hidden": true },
+    { "type": "style", "hidden": true }
+  ]
+}

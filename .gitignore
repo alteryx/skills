@@ -10,3 +10,6 @@ Thumbs.db
 
 # Tooling
 .antigravitycli/
+node_modules/
+release-notes.md
+npm-debug.log*
