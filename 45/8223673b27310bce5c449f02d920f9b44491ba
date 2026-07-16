@@ -1,0 +1,19 @@
+alteryx/skills/alteryx-designer/references/building-with-mcp.md
+  s_2b1518a7646821::t_4c4336ca8baf93 43-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "458223673b27310bce5c449f02d920f9b44491ba",
+  "prompts": {},
+  "sessions": {
+    "s_2b1518a7646821": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f6c78-f5fb-7470-b98b-e94c304c74d4",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
