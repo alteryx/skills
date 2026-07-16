@@ -1,0 +1,42 @@
+alteryx/skills/alteryx-designer/references/building-with-mcp.md
+  h_de731ef134bbdb 24
+  s_2b1518a7646821::t_759a8c19904a18 1-23,25-72
+alteryx/skills/alteryx-designer/SKILL.md
+  s_2b1518a7646821::t_a2be425779c972 8
+  s_2b1518a7646821::t_759a8c19904a18 3,10,12-15,17,19,21-26,28,30,32-39,41,43,45-48,50
+alteryx/.codex-plugin/plugin.json
+  s_2b1518a7646821::t_759a8c19904a18 3,15
+README.md
+  s_2b1518a7646821::t_759a8c19904a18 8,41,89-97
+CHANGELOG.md
+  s_2b1518a7646821::t_759a8c19904a18 3-8
+alteryx/.mcp.json
+  s_2b1518a7646821::t_759a8c19904a18 1-6
+alteryx/skills/alteryx-designer/references/building-with-fallback.md
+  s_2b1518a7646821::t_759a8c19904a18 1-76
+alteryx/mcp_config.json
+  s_2b1518a7646821::t_759a8c19904a18 1-8
+alteryx/.claude-plugin/plugin.json
+  h_de731ef134bbdb 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "241f71e2e6f07d32fa00d9b8c0e559ff4e90651d",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  },
+  "sessions": {
+    "s_2b1518a7646821": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f6c78-f5fb-7470-b98b-e94c304c74d4",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
