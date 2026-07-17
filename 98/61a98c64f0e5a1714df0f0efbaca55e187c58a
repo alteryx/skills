@@ -1,0 +1,14 @@
+.claude-plugin/marketplace.json
+  h_de731ef134bbdb 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "9861a98c64f0e5a1714df0f0efbaca55e187c58a",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
