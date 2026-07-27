@@ -12,6 +12,7 @@ It does not define every individual Designer tool's `Configuration` schema. For 
 - [Connections](#connections)
 - [Root Properties](#root-properties)
 - [AMP/E2 Engine Selection](#ampe2-engine-selection)
+- [Configuration/Update Mode](#configurationupdate-mode)
 - [Runtime Properties](#runtime-properties)
 - [MetaInfo](#metainfo)
 - [Annotations](#annotations)
@@ -216,6 +217,20 @@ When editing an existing workflow:
 - Preserve both flags during unrelated edits.
 - Do not convert E1 to AMP/E2, or AMP/E2 to E1, without explicit user confirmation.
 - If the user asks to add a tool that requires AMP/E2 to an existing E1 workflow, stop and ask for confirmation before changing the engine-selection flags.
+
+## Configuration/Update Mode
+
+For a full update run, set `updateMode="Full"` on the root document:
+
+```xml
+<AlteryxDocument updateMode="Full" ...>
+```
+
+Preserve the other root attributes, run the workflow, and then restore the root element to its original state even if the run fails.
+
+In a full update, the Engine validates tool configuration and propagates field metadata without passing records between tools. Input tools may access their configured sources to obtain metadata, but normal record processing, workflow events, and output writing do not occur. A valid run exits `0`; configuration errors emit diagnostics and exit nonzero.
+
+`AlteryxEngineCmd.exe` does not apply metadata or configuration update callbacks to the saved workflow, so use its full update run for validation rather than refreshing persisted workflow XML.
 
 ## Runtime Properties
 
