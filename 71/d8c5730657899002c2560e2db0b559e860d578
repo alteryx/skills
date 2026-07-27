@@ -1,0 +1,24 @@
+alteryx/skills/alteryx-designer/references/building-with-fallback.md
+  s_882899274e912b::t_0983a84b856e7c 16-17,74,76-94
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "71d8c5730657899002c2560e2db0b559e860d578",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  },
+  "sessions": {
+    "s_882899274e912b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fa4b3-a760-7522-9379-009b612ea60e",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
