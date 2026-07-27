@@ -1,0 +1,34 @@
+alteryx/skills/alteryx-designer/references/workflow-xml.md
+  s_19b5fe6638e5b6::t_c1119eef9a50a6 15,221-222,224-225,227-228
+  s_19b5fe6638e5b6::t_a44d63ac634b14 223,229-233
+  s_19b5fe6638e5b6::t_caeaab9fdb661a 226
+  s_19b5fe6638e5b6::t_c1005c356b6882 234
+alteryx/skills/alteryx-designer/SKILL.md
+  s_19b5fe6638e5b6::t_ccdf34ba54f8fc 99
+  s_19b5fe6638e5b6::t_ff1981a9456250 105,111-112
+  s_19b5fe6638e5b6::t_c1119eef9a50a6 3,24,97,100,102,104,106-107,109-110,114
+  s_19b5fe6638e5b6::t_a44d63ac634b14 101,103,116-117
+  s_19b5fe6638e5b6::t_caeaab9fdb661a 108,113
+  s_19b5fe6638e5b6::t_30b611a654fdad 23,115
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "6ab30fa5bfe403bdc16a5cf4d8e59a519131d537",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  },
+  "sessions": {
+    "s_19b5fe6638e5b6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fa43e-e8ec-7ae1-a5b4-5baa9a359609",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
