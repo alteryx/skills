@@ -1,0 +1,21 @@
+README.md
+  s_ca2d6ad5477b95::t_a9157e4b2a14aa 3-4,38-39,43,90-95
+  s_ca2d6ad5477b95::t_f3b730e4c361a8 7-8,40-42
+  s_ca2d6ad5477b95::t_a11075634690e6 96-97
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "e04687d959e3014bb1889036fc9e52c73e219e67",
+  "prompts": {},
+  "sessions": {
+    "s_ca2d6ad5477b95": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f95e8-4d97-70b3-817b-a03ce6562ea2",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
