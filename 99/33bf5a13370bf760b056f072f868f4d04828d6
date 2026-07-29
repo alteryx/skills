@@ -1,0 +1,19 @@
+README.md
+  s_ca2d6ad5477b95::t_e5a08445a1a9ce 6-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "9933bf5a13370bf760b056f072f868f4d04828d6",
+  "prompts": {},
+  "sessions": {
+    "s_ca2d6ad5477b95": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f95e8-4d97-70b3-817b-a03ce6562ea2",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
