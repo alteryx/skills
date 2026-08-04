@@ -1,0 +1,21 @@
+alteryx/.claude-plugin/plugin.json
+  s_d5573eeb58a034::t_afd053d209c686 4
+alteryx/.codex-plugin/plugin.json
+  s_d5573eeb58a034::t_4903a935785421 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.20",
+  "base_commit_sha": "be8a066563e3e43a6468e535d5aef4d2ccd5b628",
+  "prompts": {},
+  "sessions": {
+    "s_d5573eeb58a034": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "657855ad-60e1-4ee7-8fd6-eb75d265a2fe",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
