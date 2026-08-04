@@ -8,12 +8,7 @@
   "plugins": [
     {
       "name": "alteryx",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/alteryx/skills.git",
-        "path": "alteryx",
-        "ref": "main"
-      },
+      "source": "./alteryx",
       "description": "AI-assisted Alteryx Designer workflow authoring and execution for governed, repeatable business analysis."
     }
   ]

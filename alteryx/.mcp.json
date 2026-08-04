@@ -1,0 +1,6 @@
+{
+  "alteryx-local": {
+    "command": "alteryx-mcp-server",
+    "args": []
+  }
+}
