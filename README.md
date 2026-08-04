@@ -1,11 +1,16 @@
 # Alteryx Skills
 
-This repository packages the `alteryx` plugin for Codex, Antigravity, and Claude Code.
+This repository packages the `alteryx` plugin for Codex, Antigravity, Claude Code,
+and Claude Desktop.
 The public repository is owned and maintained by the Ask Alteryx team.
+
+For full installation, usage, runtime requirements, and troubleshooting
+documentation, see
+[Get Started with Alteryx Skills](https://help.alteryx.com/current/en/developer-help/get-started-with-alteryx-skills.html).
 
 ## Features
 
-- **Alteryx Designer**: Build, inspect, run, and repair trusted workflows for repeatable business analysis.
+- **Alteryx Designer**: Build, inspect, run, and repair trusted workflows through local Alteryx MCP tools, with an XML and Engine fallback when MCP is unavailable.
 - Use AI-assisted workflow authoring and execution for data preparation, reconciliation, compliance reporting, operational analytics, governed calculations, and other reusable business logic.
 
 ## Installation
@@ -30,6 +35,12 @@ claude plugin marketplace add alteryx/skills
 claude plugin install alteryx@alteryx
 ```
 
+### Claude Desktop
+
+Install the Alteryx plugin from **Settings > Plugins** in Claude Desktop. See
+the [official guide](https://help.alteryx.com/current/en/developer-help/get-started-with-alteryx-skills.html#claude-desktop)
+for step-by-step instructions.
+
 ### Skills Only
 
 ```bash
@@ -38,7 +49,7 @@ npx skills add alteryx/skills
 
 ## Usage
 
-The plugin contains one skill, `alteryx-designer`. Agents can select it automatically when your request clearly involves local Alteryx Designer workflows, such as building a workflow, editing a `.yxmd`, running a workflow with Designer Engine, repairing execution errors, or validating workflow outputs.
+The plugin contains one skill, `alteryx-designer`. Agents can select it automatically when your request clearly involves local Alteryx Designer workflows, such as building a workflow, editing a `.yxmd`, running a workflow with Designer Engine, repairing execution errors, or validating workflow outputs. The skill prefers the `alteryx-local` MCP server when its workflow tools are available and otherwise uses its bundled XML and PowerShell fallback.
 
 Example automatic invocations:
 
@@ -76,6 +87,14 @@ Use `/alteryx:alteryx-designer` to invoke the Designer skill:
 /alteryx:alteryx-designer create a workflow that cleans this CSV, applies the required formulas, and writes a YXDB
 ```
 
+### Claude Desktop
+
+Use `/alteryx-designer` to invoke the Designer skill:
+
+```text
+/alteryx-designer inspect this workflow and explain what it does
+```
+
 ### Antigravity
 
 Use `/alteryx:alteryx-designer` to invoke the Designer skill:
@@ -86,7 +105,15 @@ Use `/alteryx:alteryx-designer` to invoke the Designer skill:
 
 ## Runtime Requirements
 
-Workflow execution requires a local Alteryx Designer installation with `AlteryxEngineCmd.exe`. Workflow inspection and XML editing can proceed without Designer, but run validation requires local Engine access.
+The full plugin configures the optional `alteryx-local` MCP server using:
+
+```powershell
+alteryx-mcp-server
+```
+
+When that command and its required workflow tools are available, the skill uses them by default. Skills-only installs and clients without the server continue to use the bundled XML and PowerShell fallback.
+
+Workflow execution requires a local Alteryx Designer installation with `AlteryxEngineCmd.exe`, whether invoked through MCP or the fallback scripts. XML inspection and editing can proceed in fallback mode without Designer, but run validation requires local Engine access.
 
 ## Releases
 
