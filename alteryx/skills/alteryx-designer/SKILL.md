@@ -16,14 +16,21 @@ Use this skill for local Alteryx Designer work. Operate on local `.yxmd` workflo
 
 Treat capability availability, not a server name alone, as decisive. An MCP server that lacks a required create, edit, run, or inspection operation does not cover that task. Use fallback for `.yxwz` or custom constructs when MCP does not explicitly support them.
 
+## Build With Native Designer Tools
+
+Compose workflows from native Designer tools. Assume a native tool exists until discovery shows otherwise. Use a code tool (Python, R, or Run Command) only when the requirement cannot be met natively: state the specific gap, get user approval, and scope the code to that gap with native tools on both sides of it.
+
+When the native approach is unclear, use tool discovery and knowledge search, or ask.
+
 ## Standard Build Loop
 
 1. Inspect the existing workflow before changing it.
-2. Discover supported tools and configuration evidence as needed.
-3. Make the smallest useful mutation.
-4. Run the workflow after meaningful changes.
-5. Inspect run messages and relevant output evidence.
-6. Repair and rerun until the workflow satisfies the request or a blocking condition is clear.
+2. Decompose the request into an ordered list of named Designer tools before the first mutation.
+3. Discover supported tools and configuration evidence as needed.
+4. Make the smallest useful mutation.
+5. Run the workflow after meaningful changes.
+6. Inspect run messages and relevant output evidence.
+7. Repair and rerun until the workflow satisfies the request or a blocking condition is clear.
 
 Do not claim success based only on a saved mutation or valid XML. Completion requires saved changes, a successful Engine-backed run unless execution is explicitly out of scope or blocked, and evidence that relevant outputs satisfy the request.
 
@@ -42,6 +49,7 @@ Do not claim success based only on a saved mutation or valid XML. Completion req
 
 Verify all applicable evidence:
 
+- The workflow is composed of native Designer tools. Any code tool present was approved by the user.
 - The requested workflow changes are saved at the intended path.
 - The Engine-backed run succeeded and produced substantive diagnostics, not only start/finish banners.
 - Expected files, databases, metadata, or sampled anchor results were created or updated.
