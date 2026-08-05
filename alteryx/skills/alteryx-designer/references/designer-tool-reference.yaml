@@ -2487,11 +2487,40 @@
     - Input
     outputs:
     - Output
+- tool_name: Python
+  plugin_name: JupyterCode
+  tool_palette: Developer
+  tool_description: runs Python code within a workflow. Use only when the
+    requirement cannot be met with native Designer tools.
+  connections:
+    inputs:
+    - Input
+    outputs:
+    - Output1
+    - Output2
+    - Output3
+    - Output4
+    - Output5
+- tool_name: R
+  plugin_name: AlteryxRPluginGui.R
+  tool_palette: Developer
+  tool_description: runs R code within a workflow. Use only when the requirement
+    cannot be met with native Designer tools.
+  connections:
+    inputs:
+    - Input
+    outputs:
+    - Output1
+    - Output2
+    - Output3
+    - Output4
+    - Output5
 - tool_name: Run Command
   plugin_name: AlteryxBasePluginsGui.RunCommand.RunCommand
   tool_palette: Developer
   tool_description: allows a user to run external programs from within an Alteryx
-    workflow
+    workflow. Use only when the requirement cannot be met with native Designer
+    tools.
   connections:
     inputs:
     - Input
