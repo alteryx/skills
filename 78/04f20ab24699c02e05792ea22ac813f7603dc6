@@ -1,0 +1,79 @@
+README.md
+  s_5baef1d1f79932::t_9956d912238724 153-157,159-162,164-166,169-176
+  s_5baef1d1f79932::t_4c60780b051071 13-14
+  s_5baef1d1f79932::t_d711c174f1a856 137-139,145-151,177,179
+  s_5baef1d1f79932::t_af8a889487816a 55-57
+  s_5baef1d1f79932::t_1699952c397c13 79,89,95-98,101,107-110,113,119-122,125,131-133
+  h_de731ef134bbdb 158,163,167-168
+  s_5baef1d1f79932::t_61dfdb4ded117b 53,58-59,73-78
+  s_5baef1d1f79932::t_faee3b8747ba51 80
+  s_5baef1d1f79932::t_8188c746babba0 134
+  s_5baef1d1f79932::t_004cb0159e6a52 152
+alteryx/skills/alteryx-designer/SKILL.md
+  s_5baef1d1f79932::t_ba45b0ff4037e5 12-13,15-16,18-22,24,26-30,38-40,62,67,74,79
+  h_de731ef134bbdb 8,23,25,42
+  s_5baef1d1f79932::t_729123463e9996 14
+  s_5baef1d1f79932::t_c7c6b96063c1ec 43
+  s_5baef1d1f79932::t_a170bb1a36f15c 3
+  h_de731ef134bbdb 41
+alteryx/.mcp.json
+  s_5baef1d1f79932::t_d3cc8ee8af3c84 5-8
+.claude-plugin/marketplace.json
+  s_5baef1d1f79932::t_cb5971413b641c 12
+alteryx/.codex-plugin/plugin.json
+  s_5baef1d1f79932::t_aa8faba11c5307 4
+  s_5baef1d1f79932::t_9e45d377161302 19
+  s_5baef1d1f79932::t_41e26ff8722c2b 29-30
+  s_5baef1d1f79932::t_dffeb7203ee2b3 18
+alteryx/skills/alteryx-asset-discovery/SKILL.md
+  s_1910e19d1553c6::t_9f196936ad01db 43
+  s_1910e19d1553c6::t_41d0d4c3ad75e4 45
+  s_5baef1d1f79932::t_00b4fce83e7728 1-2,4-9,11-13,15-16,19-21,26-30,32,38-42,44,47,49,51,54,56,58-60,62,65-68,71,73-98,100-105,108,110-118
+  s_1910e19d1553c6::t_c7092294c451a7 3,24-25,31,33,48,50,52,55,57,61,69,72,106-107,109
+  h_de731ef134bbdb 10,18,34-37,46,53,63-64,70
+  s_1910e19d1553c6::t_65a069080514ac 99
+  s_1910e19d1553c6::t_3bbffcc2bc51e0 14,17
+  s_1910e19d1553c6::t_089c327ad6a8f2 22
+  s_1910e19d1553c6::t_436d8b5cc1feed 23
+alteryx/.claude-plugin/plugin.json
+  s_5baef1d1f79932::t_60f876bc26a3a9 3
+alteryx/skills/alteryx-designer/references/building-with-mcp.md
+  s_5baef1d1f79932::t_2a86b180991c50 22-25
+  s_5baef1d1f79932::t_6f01b596a6567b 31-49,51-52,54
+  h_de731ef134bbdb 7,10,12,56,58,77,96
+  s_5baef1d1f79932::t_1d5f9be5992818 60,62-66,75
+  s_5baef1d1f79932::t_5d8b558b93c229 1,9,11,15,18-19,29-30,55,76,85,100,107,113-114
+  s_5baef1d1f79932::t_7d7a9175d5be1e 3
+  s_5baef1d1f79932::t_0fffc7ee27836d 20-21,78
+alteryx/mcp_config.json
+  s_5baef1d1f79932::t_6626cbf727326c 6-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "7804f20ab24699c02e05792ea22ac813f7603dc6",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  },
+  "sessions": {
+    "s_1910e19d1553c6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "19329fc5-4e39-4431-bb09-4d4a8c90e30b",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    },
+    "s_5baef1d1f79932": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "05b93229-d6f5-4102-9f3e-41a2ca000386",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
