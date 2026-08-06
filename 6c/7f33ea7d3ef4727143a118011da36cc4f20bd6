@@ -1,0 +1,28 @@
+alteryx/.codex-plugin/plugin.json
+  s_695af47d1f13e0::t_c145b2d503c5f6 3
+CHANGELOG.md
+  s_695af47d1f13e0::t_2c894ca9297723 3-18
+alteryx/.claude-plugin/plugin.json
+  s_695af47d1f13e0::t_4c5eeb20355478 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "6c7f33ea7d3ef4727143a118011da36cc4f20bd6",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  },
+  "sessions": {
+    "s_695af47d1f13e0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "06f0770c-2762-4ef6-bc58-d5c564f56bfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
