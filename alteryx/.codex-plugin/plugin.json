@@ -1,6 +1,6 @@
 {
   "name": "alteryx",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Use AI to build, inspect, run, and repair trusted Alteryx Designer workflows for repeatable business analysis.",
   "author": {
     "name": "Alteryx",
