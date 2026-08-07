@@ -1,0 +1,28 @@
+alteryx/skills/alteryx-designer/references/building-with-fallback.md
+  s_39a11b224243e7::t_e77a6f810c92c0 70-71,92
+  s_39a11b224243e7::t_9bae294f27c353 74
+alteryx/skills/alteryx-designer/scripts/Invoke-AlteryxWorkflow.ps1
+  s_39a11b224243e7::t_e77a6f810c92c0 274,299
+  s_39a11b224243e7::t_a368bb6c5d6671 276-282
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "038a9b10b0de5d210078acdba2cad537dc0ee239",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  },
+  "sessions": {
+    "s_39a11b224243e7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fdd26-6ae6-7233-8c84-d3b8b38285f9",
+        "model": "gpt-5.6-terra"
+      },
+      "human_author": null
+    }
+  }
+}
