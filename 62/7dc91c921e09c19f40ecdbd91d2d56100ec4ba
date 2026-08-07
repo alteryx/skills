@@ -1,0 +1,26 @@
+alteryx/.claude-plugin/plugin.json
+  s_f52f50aaa1f7ea::t_04c49418d4412c 4
+alteryx/.codex-plugin/plugin.json
+  s_f52f50aaa1f7ea::t_3bbf1189e2605f 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "627dc91c921e09c19f40ecdbd91d2d56100ec4ba",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  },
+  "sessions": {
+    "s_f52f50aaa1f7ea": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "2f81618f-89ad-4361-a258-dba3e9093d6c",
+        "model": "unknown"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
