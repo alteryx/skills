@@ -1,0 +1,24 @@
+alteryx/skills/alteryx-designer/scripts/Invoke-AlteryxWorkflow.ps1
+  s_39a11b224243e7::t_a368bb6c5d6671 275-281
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "891e3acaecf0d561fd95e27e165af9fbc0d315b2",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  },
+  "sessions": {
+    "s_39a11b224243e7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fdd26-6ae6-7233-8c84-d3b8b38285f9",
+        "model": "gpt-5.6-terra"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
