@@ -67,9 +67,11 @@ powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-AlteryxWorkflow.ps1 C:
 
 Pass `-EnginePath` when the executable is known directly. Use `-Json` on `Invoke-AlteryxWorkflow.ps1` when structured output helps inspection.
 
+The script exits with code `0` when the Engine exits with code `0` (success) or `1` (success with warnings). In JSON output, `exit_code` remains the original Engine exit code and `status` distinguishes `success` from `success_with_warnings`.
+
 Run native Engine execution in a normal host context. Some agent sandboxes can return exit code `0` while preventing real output materialization. After every run verify:
 
-- The process exit code is `0`.
+- The script process exit code is `0`, including warning-only runs.
 - stdout/stderr contains substantive workflow diagnostics, not only banner/start/finish lines.
 - For a normal run, expected output files, databases, or sampled results were created or updated.
 
@@ -87,7 +89,7 @@ For any workflow, use a full update run to validate tool configuration and propa
 
 2. Run the workflow through `scripts/Invoke-AlteryxWorkflow.ps1` using the same command as a normal run.
 3. Restore the root element to its original state after the run, even when the Engine fails.
-4. Require exit code `0` and inspect Engine diagnostics. Configuration errors produce diagnostic details and a nonzero exit code.
+4. Require a script exit code of `0` and inspect Engine diagnostics. In JSON output, verify that `status` is `success` or `success_with_warnings`; configuration errors produce a nonzero script exit code.
 
 Because records are not passed between tools, normal record-processing behavior, workflow events, and output writing do not occur. Input tools may still access their configured sources to obtain field metadata.
 
