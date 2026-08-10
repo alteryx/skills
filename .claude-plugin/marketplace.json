@@ -9,7 +9,7 @@
     {
       "name": "alteryx",
       "source": "./alteryx",
-      "description": "AI-assisted Alteryx Designer workflow authoring and execution for governed, repeatable business analysis."
+      "description": "AI-assisted Alteryx asset discovery, workflow authoring, and execution for governed, repeatable business analysis."
     }
   ]
 }

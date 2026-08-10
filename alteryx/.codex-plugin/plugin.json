@@ -1,7 +1,7 @@
 {
   "name": "alteryx",
   "version": "0.2.0",
-  "description": "Use AI to build, inspect, run, and repair trusted Alteryx Designer workflows for repeatable business analysis.",
+  "description": "Use AI to discover existing Alteryx assets and to build, inspect, run, and repair trusted workflows for repeatable business analysis.",
   "author": {
     "name": "Alteryx",
     "email": "support@alteryx.com",
@@ -15,8 +15,8 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Alteryx",
-    "shortDescription": "Build and run trusted Designer workflows",
-    "longDescription": "Use Alteryx Designer as the trusted execution layer behind AI-assisted analytics. Build, inspect, run, and repair workflows for data preparation, reconciliation, compliance reporting, operational analytics, governed calculations, and other repeatable business processes while keeping logic visible, reusable, and auditable.",
+    "shortDescription": "Discover assets, build and run trusted workflows",
+    "longDescription": "Use Alteryx as the trusted execution layer behind AI-assisted analytics. Find and verify the workflows, macros, and datasets that already exist, then build, inspect, run, and repair workflows for data preparation, reconciliation, compliance reporting, operational analytics, governed calculations, and other repeatable business processes while keeping logic visible, reusable, and auditable.",
     "developerName": "Alteryx",
     "category": "Productivity",
     "capabilities": ["Interactive", "Write"],
@@ -26,7 +26,8 @@
     "defaultPrompt": [
       "Inspect this local Alteryx workflow.",
       "Build a Designer workflow from these files.",
-      "Run and repair my local workflow."
+      "Run and repair my local workflow.",
+      "Find existing workflows and datasets related to this problem."
     ],
     "brandColor": "#006FE5",
     "composerIcon": "./assets/alteryx.svg",
