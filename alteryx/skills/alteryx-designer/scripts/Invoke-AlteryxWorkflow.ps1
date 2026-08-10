@@ -271,8 +271,15 @@ if ($execution.timed_out) {
 }
 
 $exitCode = [int]$execution.exit_code
+$scriptExitCode = if ($exitCode -in @(0, 1)) { 0 } else { $exitCode }
 $result = [pscustomobject]@{
-    status = if ($exitCode -eq 0) { "success" } else { "failed" }
+    status = if ($exitCode -eq 0) {
+        "success"
+    } elseif ($exitCode -eq 1) {
+        "success_with_warnings"
+    } else {
+        "failed"
+    }
     exit_code = $exitCode
     engine = $enginePathResolved
     workflow = $workflowPathResolved
@@ -289,4 +296,4 @@ if ($Json) {
     "AlteryxEngineCmd exited with code $exitCode."
 }
 
-exit $exitCode
+exit $scriptExitCode
