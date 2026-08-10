@@ -3,6 +3,10 @@
     "alteryx-local": {
       "command": "alteryx-mcp-server",
       "args": []
+    },
+    "alteryx": {
+      "type": "http",
+      "url": "https://us1.alteryxcloud.com/mcp/v1"
     }
   }
 }
