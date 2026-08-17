@@ -12,6 +12,7 @@ documentation, see
 
 - **Alteryx Designer**: Build, inspect, run, and repair trusted workflows, and validate their outputs against what you actually asked for.
 - **Alteryx Asset Discovery**: Find and verify the workflows, macros, and datasets that already exist, so a build starts from real assets and real schemas instead of duplicating logic.
+- **Alteryx Insights**: Answer business questions with governed Alteryx One data using analysis powered by Alteryx Auto Insights.
 - Use AI-assisted workflow authoring and execution for data preparation, reconciliation, compliance reporting, operational analytics, governed calculations, and other reusable business logic.
 
 ## Installation
@@ -74,13 +75,15 @@ connected.
 
 ## Usage
 
-The plugin contains two skills.
+The plugin contains three skills.
 
 `alteryx-designer` handles workflow work: building a workflow, editing a `.yxmd`, running a workflow, repairing execution errors, and validating outputs. It works on both local files and Alteryx One workflows, using whichever tools your environment makes available.
 
 `alteryx-asset-discovery` is read-only. It searches the directories you authorize and the Alteryx assets you can access, verifies the promising candidates, and reports the evidence — including when something it found may already do what you were about to build.
 
-Agents can select either skill automatically. Example invocations:
+`alteryx-insights` answers business data questions using the Alteryx One Insights toolset. It supports analysis such as totals, trends, period changes, goal variance, correlations, and outliers, along with record-level lookups, exact rankings, and grouped summaries.
+
+Agents can select the appropriate skill automatically. Example invocations:
 
 ```text
 Build an Alteryx workflow that joins these customer and order files, filters inactive accounts, and writes a reconciled output.
@@ -102,6 +105,10 @@ What workflows and datasets in my workspace already deal with customer churn?
 Before we build a weekly revenue summary, check whether something like it already exists.
 ```
 
+```text
+What drove the change in monthly revenue, and were there any unusual regional results?
+```
+
 ### Codex
 
 Use `@Alteryx` to invoke the Alteryx plugin as a whole:
@@ -120,6 +127,10 @@ $alteryx:alteryx-designer inspect ./workflows/reconciliation.yxmd and repair the
 $alteryx:alteryx-asset-discovery find macros in ./workflows that already standardize address fields
 ```
 
+```text
+$alteryx:alteryx-insights compare this month's revenue with last month and explain the strongest drivers
+```
+
 ### Claude Code
 
 Use `/alteryx:<skill>` to invoke a skill:
@@ -130,6 +141,10 @@ Use `/alteryx:<skill>` to invoke a skill:
 
 ```text
 /alteryx:alteryx-asset-discovery what datasets in my workspace hold monthly order history?
+```
+
+```text
+/alteryx:alteryx-insights show the trend in customer churn over the past year
 ```
 
 ### Claude Desktop
@@ -144,6 +159,10 @@ Use `/<skill>` to invoke a skill:
 /alteryx-asset-discovery find existing workflows related to sales tax reconciliation
 ```
 
+```text
+/alteryx-insights which regions had unusual sales results last quarter?
+```
+
 ### Antigravity
 
 Use `/alteryx:<skill>` to invoke a skill:
@@ -156,6 +175,10 @@ Use `/alteryx:<skill>` to invoke a skill:
 /alteryx:alteryx-asset-discovery locate the canonical customer dataset these workflows read from
 ```
 
+```text
+/alteryx:alteryx-insights rank the top five products by total revenue
+```
+
 ## Runtime Requirements
 
 The full plugin configures two optional MCP servers.
@@ -166,7 +189,7 @@ The full plugin configures two optional MCP servers.
 alteryx-mcp-server
 ```
 
-`alteryx` connects over HTTP to Alteryx One and exposes the cloud workflow, asset search, and dataset preview tools:
+`alteryx` connects over HTTP to Alteryx One and exposes the Insights analysis, cloud workflow, asset search, and dataset preview tools:
 
 ```text
 https://us1.alteryxcloud.com/mcp/v1
