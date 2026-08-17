@@ -48,6 +48,30 @@ for step-by-step instructions.
 npx skills add alteryx/skills
 ```
 
+## Authenticate with Alteryx One
+
+The cloud `alteryx` MCP server requires an Alteryx One account. Cloud calls run
+as the signed-in user and are subject to workspace permissions and data-access
+policy.
+
+### Codex
+
+Run:
+
+```bash
+codex mcp login alteryx
+```
+
+Complete the browser sign-in flow, then restart Codex so the cloud tools are
+connected.
+
+### Claude Code
+
+1. Run `/plugin` to open the plugin manager.
+2. Open the **Installed** tab.
+3. Select **alteryx MCP** under **Needs attention** to start the Alteryx One
+   sign-in flow.
+
 ## Usage
 
 The plugin contains two skills.
@@ -147,8 +171,6 @@ alteryx-mcp-server
 ```text
 https://us1.alteryxcloud.com/mcp/v1
 ```
-
-Using the `alteryx` server requires an Alteryx One account, and your client will prompt you to sign in. All cloud calls run as the signed-in user, subject to workspace permissions and data-access policy.
 
 ### Set Your Regional Endpoint
 
