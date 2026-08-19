@@ -30,6 +30,35 @@ codex plugin add alteryx@alteryx
 agy plugin install https://github.com/alteryx/skills.git
 ```
 
+**Required manual step.** Antigravity CLI does not load MCP servers from
+installed plugins (see
+[Known Issues](#antigravity-does-not-load-plugin-provided-mcp-servers)). Add
+the `alteryx` server to Antigravity's user-level configuration:
+
+| Platform      | Configuration file                             |
+|----------------|------------------------------------------------|
+| macOS / Linux | `~/.gemini/config/mcp_config.json`              |
+| Windows       | `%USERPROFILE%\.gemini\config\mcp_config.json`  |
+
+Create the file if it doesn't exist. If it already contains other servers,
+merge this entry into the existing `mcpServers` object rather than replacing
+the file:
+
+```json
+{
+  "mcpServers": {
+    "alteryx": {
+      "serverUrl": "https://us1.alteryxcloud.com/mcp/v1"
+    }
+  }
+}
+```
+
+Use the endpoint for your workspace's region — see
+[Set Your Regional Endpoint](#set-your-regional-endpoint).
+
+Restart `agy` and run `/mcp` to confirm `alteryx` is connected.
+
 ### Claude Code
 
 ```bash
@@ -72,6 +101,14 @@ connected.
 2. Open the **Installed** tab.
 3. Select **alteryx MCP** under **Needs attention** to start the Alteryx One
    sign-in flow.
+
+### Antigravity
+
+1. Run `/mcp` to open the MCP server manager.
+2. Use the arrow keys to select `alteryx`.
+3. Press `Enter`. Antigravity starts the Alteryx One sign-in flow
+   automatically and opens your browser.
+4. Complete sign-in. The panel shows `alteryx` as `[Authed]` once connected.
 
 ## Usage
 
@@ -207,12 +244,11 @@ Alteryx One is hosted in three regions, and the plugin ships the United States e
 
 There is no global endpoint. A single shared host would route requests through infrastructure outside the caller's region, which some data-residency commitments do not permit. The endpoint must therefore match your workspace's region, and no client can pick it for you.
 
-To change it, edit the `alteryx` server's `url` in the installed plugin's configuration and replace `us1` with `eu1` or `au1`:
+To change it, replace `us1` with `eu1` or `au1` in the endpoint used by your
+client:
 
-- `alteryx/.mcp.json` — Codex, Claude Code, and Claude Desktop.
-- `alteryx/mcp_config.json` — Antigravity.
-
-Restart your client, or reload plugins, so it reconnects. Re-apply the edit after upgrading the plugin, because an upgrade replaces the bundled configuration files.
+- `alteryx/.mcp.json`, field `url` — Codex, Claude Code, and Claude Desktop. Restart your client, or reload plugins, so it reconnects. Re-apply the edit after upgrading the plugin, because an upgrade replaces the bundled configuration file.
+- Antigravity — set `serverUrl` in your user-level `mcp_config.json` (see [Antigravity](#antigravity) under Installation). Editing the plugin's bundled `alteryx/mcp_config.json` has no effect, since Antigravity doesn't read it — see [Known Issues](#antigravity-does-not-load-plugin-provided-mcp-servers). Restart `agy` after changing it.
 
 Claude Code and Claude Desktop also support `${VAR}` and `${VAR:-default}` expansion in an MCP server `url`, so you can make the edit once as
 `"url": "${ALTERYX_MCP_URL:-https://us1.alteryxcloud.com/mcp/v1}"` and set `ALTERYX_MCP_URL` in your environment. The bundled configuration does not use expansion, because Codex reads the same file and does not support that syntax.
@@ -222,6 +258,25 @@ If you define your own regional `alteryx` server instead of editing the bundled 
 When a server and its required tools are available, the skills use them by default. Local workflow work falls back to the bundled XML and PowerShell path when no local workflow tools are present; cloud workflow work has no fallback. Local asset discovery needs neither server — it uses your agent's own file search and read capabilities within the directories you authorize.
 
 Local workflow execution requires an Alteryx Designer installation with `AlteryxEngineCmd.exe`, whether invoked through MCP or the fallback scripts. XML inspection and editing can proceed in fallback mode without Designer, but run validation requires local Engine access. Cloud workflow execution runs in Alteryx One and needs no local Designer install.
+
+## Known Issues
+
+### Antigravity does not load plugin-provided MCP servers
+
+Antigravity CLI (`agy`) 1.1.14 does not start MCP servers bundled with an
+installed plugin. Skills load normally and the plugin reports as enabled,
+but `/mcp` reports no configured servers.
+
+**Workaround:** declare the `alteryx` server in Antigravity's user-level
+configuration. See [Antigravity](#antigravity) under Installation for the
+file location and the exact entry.
+
+This is a defect in Antigravity, tracked upstream as
+[google-antigravity/antigravity-cli#761](https://github.com/google-antigravity/antigravity-cli/issues/761).
+It is not specific to this plugin and cannot be resolved from this
+repository. Remove the workaround once Antigravity ships a fix.
+
+Verified on `agy` 1.1.14, macOS. Windows is untested.
 
 ## Releases
 

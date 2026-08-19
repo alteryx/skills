@@ -1,5 +1,14 @@
 # alteryx-skills
 
+## Unreleased
+
+- Document that Antigravity does not load MCP servers from installed
+  plugins, and add the user-level `mcp_config.json` workaround to the
+  Antigravity install instructions. Upstream:
+  [google-antigravity/antigravity-cli#761](https://github.com/google-antigravity/antigravity-cli/issues/761).
+- Update `alteryx/mcp_config.json` to the `serverUrl` schema for conformance
+  with `agy plugin validate`. `alteryx-local` is unchanged.
+
 ## 0.2.0
 
 - The `alteryx-designer` skill is now MCP-first: it uses the `alteryx-local`
