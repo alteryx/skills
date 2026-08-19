@@ -1,0 +1,20 @@
+README.md
+  h_de731ef134bbdb 186,224
+alteryx/skills/alteryx-designer/SKILL.md
+  h_de731ef134bbdb 14-15,28
+alteryx/skills/alteryx-designer/references/building-with-fallback.md
+  h_de731ef134bbdb 3
+alteryx/skills/alteryx-designer/references/building-with-mcp.md
+  h_de731ef134bbdb 5-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "c0ea2e1319c4d95776b8a2619344651d89289362",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
