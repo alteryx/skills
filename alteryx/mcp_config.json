@@ -5,8 +5,7 @@
       "args": []
     },
     "alteryx": {
-      "type": "http",
-      "url": "https://us1.alteryxcloud.com/mcp/v1"
+      "serverUrl": "https://us1.alteryxcloud.com/mcp/v1"
     }
   }
 }
