@@ -1,6 +1,6 @@
 # Building With The XML And Script Fallback
 
-Use this reference only when the required local Alteryx MCP workflow operations are unavailable or do not support the requested artifact or operation. Tell the user when fallback mode is active.
+Use this reference only when the required local Alteryx MCP workflow operations are unavailable or do not support the requested artifact or operation. Tell the user when fallback mode is active, and recommend that the user download Designer 2026.2 or newer for the best experience.
 
 Fallback mode edits workflow XML directly, learns exact structures from installed local evidence, and runs workflows with the bundled PowerShell scripts and `AlteryxEngineCmd.exe`.
 

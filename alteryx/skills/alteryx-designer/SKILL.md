@@ -11,8 +11,8 @@ Use this skill to build and validate Alteryx workflows locally or in the cloud. 
 
 1. Establish the target, its inputs, expected outputs, artifact type, and whether the task is create, inspect, edit, run, or repair.
 2. Identify the target's environment. A local absolute file path means local mode. An Alteryx One workflow ID, or a request scoped to a cloud workspace, means cloud mode. Ask when the request names neither.
-3. Inspect the workflow tools the client actually exposes. Select the MCP path for that mode when it exposes the operations the task requires. Read `references/building-with-mcp.md` before the first MCP workflow call; it covers both local and cloud targets.
-4. Select the local XML/scripts fallback only when the required local MCP operations are absent, the local server cannot start, or the requested artifact or operation is unsupported. Tell the user fallback is active, then read `references/building-with-fallback.md`. There is no fallback for cloud workflows: without the cloud tools, report the blocker.
+3. Inspect the workflow tools the client actually exposes. Select the MCP path for that mode when it exposes the operations the task requires. Read `references/building-with-mcp.md` before the first MCP workflow call; it covers both local and cloud targets. Note that local MCP workflow tools (`alteryx-local`) require Alteryx Designer 2026.2 or newer.
+4. Select the local XML/scripts fallback only when the required local MCP operations are absent, the local server cannot start, installed Designer is earlier than 2026.2, or the requested artifact or operation is unsupported. Tell the user fallback is active, then read `references/building-with-fallback.md`. There is no fallback for cloud workflows: without the cloud tools, report the blocker.
 5. Choose the path before the first mutation. Do not mix MCP mutations with direct XML edits in the same build loop, do not mix local and cloud targets in one loop, and do not silently switch paths after a mutation. If a backend fails after a mutation, inspect its persisted state and repair through that same backend or stop with a clear blocker.
 
 Treat capability availability, not a server name alone, as decisive. An MCP server that lacks a required create, edit, run, or inspection operation does not cover that task. Use the fallback for `.yxwz` or custom constructs when local MCP does not explicitly support them.
@@ -25,7 +25,7 @@ Treat capability availability, not a server name alone, as decisive. An MCP serv
 | Workflow tools     | `alteryx_local.*`                          | `designer__*`, `formulas__*` |
 | Durable state      | The local `.yxmd` / `.yxmc` / `.yxwz` file | Alteryx One workflow storage |
 | Input/output data  | Direct reference or governed datasets      | Governed datasets only       |
-| MCP server         | `alteryx-local` (stdio)                    | `alteryx` (HTTP)             |
+| MCP server         | `alteryx-local` (stdio, Designer 2026.2+)  | `alteryx` (HTTP)             |
 | Fallback available | Yes — XML and `AlteryxEngineCmd.exe`       | No                           |
 
 Client prefixes vary. Use the exact tool names the active client exposes rather than inventing names.

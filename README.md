@@ -220,7 +220,7 @@ Use `/alteryx:<skill>` to invoke a skill:
 
 The full plugin configures two optional MCP servers.
 
-`alteryx-local` runs on your machine and exposes local workflow tools:
+`alteryx-local` runs on your machine and exposes local workflow tools (requires Alteryx Designer 2026.2 or newer):
 
 ```powershell
 alteryx-mcp-server
@@ -257,7 +257,9 @@ If you define your own regional `alteryx` server instead of editing the bundled 
 
 When a server and its required tools are available, the skills use them by default. Local workflow work falls back to the bundled XML and PowerShell path when no local workflow tools are present; cloud workflow work has no fallback. Local asset discovery needs neither server — it uses your agent's own file search and read capabilities within the directories you authorize.
 
-Local workflow execution requires an Alteryx Designer installation with `AlteryxEngineCmd.exe`, whether invoked through MCP or the fallback scripts. XML inspection and editing can proceed in fallback mode without Designer, but run validation requires local Engine access. Cloud workflow execution runs in Alteryx One and needs no local Designer install.
+Local workflow execution requires an Alteryx Designer installation with `AlteryxEngineCmd.exe`, whether invoked through MCP or the fallback scripts. Local MCP workflow tools (`alteryx-local`) require Designer 2026.2 or newer; earlier versions use the bundled XML and PowerShell fallback path. XML inspection and editing can proceed in fallback mode without Designer, but run validation requires local Engine access. Designer 2026.2 or newer is recommended for best performance. Visit the downloads area of the Alteryx One App to obtain the latest version. 
+
+Cloud workflow execution runs in Alteryx One and needs no local Designer install.
 
 ## Known Issues
 
