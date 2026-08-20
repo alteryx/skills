@@ -1,0 +1,20 @@
+README.md
+  h_de731ef134bbdb 224-225
+  h_de731ef134bbdb 226
+alteryx/skills/alteryx-designer/SKILL.md
+  h_de731ef134bbdb 14
+  h_de731ef134bbdb 28
+alteryx/skills/alteryx-designer/references/building-with-fallback.md
+  h_de731ef134bbdb 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "4829cb3b64c1b53a3d7d87f1fcb3ee030544d4aa",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
