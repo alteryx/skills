@@ -22,7 +22,7 @@ Treat capability availability, not a server name alone, as decisive. An MCP serv
 | Concern            | Local mode                                 | Cloud mode                   |
 |--------------------|--------------------------------------------|------------------------------|
 | Target identifier  | `file_path` (absolute)                     | `workflow_id`                |
-| Workflow tools     | `alteryx_local.*`                          | `designer__*`, `formulas__*` |
+| Workflow tools     | `alteryx_local__*`                         | `designer__*`, `formulas__*` |
 | Durable state      | The local `.yxmd` / `.yxmc` / `.yxwz` file | Alteryx One workflow storage |
 | Input/output data  | Direct reference or governed datasets      | Governed datasets only       |
 | MCP server         | `alteryx-local` (stdio, Designer 2026.2+)  | `alteryx` (HTTP)             |
