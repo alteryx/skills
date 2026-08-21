@@ -34,7 +34,21 @@ Use the read-only tools below through the `alteryx` MCP server. Client prefixes 
 |-------------------------------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
 | `assets__search_alteryx_assets(query)`          | Search governed assets with a focused natural-language query.  | Treat results as candidates, not verified facts.                      |
 | `designer__get_condensed_workflow(workflow_id)` | Inspect a cloud workflow or macro.                             | This is the evidence that verifies a workflow candidate.              |
-| `datasets__preview_dataset(dataset_id)`         | Verify a governed dataset's schema and inspect a small sample. | Respect returned limits. Never use repeated previews to bulk-extract. |
+| `datasets__preview_dataset(datasetId, limit)`   | Verify a governed dataset's schema and inspect a small sample. | Pass the dataset ID in the current preview contract; respect returned limits and never use repeated previews to bulk-extract. |
+
+### Cloud asset identifiers
+
+Search results may identify cloud assets with URNs or other wrappers, for example
+`urn:li:ayxDataset:(workspaceId,datasetId)`. Do not pass a full URN directly to
+a follow-on tool. Extract the asset ID required by that tool and pass it in the
+documented parameter, preserving the ID exactly. Remove only a recognized
+wrapper; do not guess or otherwise transform the ID.
+
+For example, a dataset preview passes the `datasetId` component:
+
+```json
+{"datasetId":"<datasetId>","limit":5}
+```
 
 Translate the business question into focused searches rather than broad ones. Search relevance depends on the metadata indexed for each asset, so an asset with thin metadata may only be findable by name or path — try both.
 
