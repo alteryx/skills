@@ -1,13 +1,33 @@
 # alteryx-skills
 
-## Unreleased
+## 0.3.0
 
-- Document that Antigravity does not load MCP servers from installed
-  plugins, and add the user-level `mcp_config.json` workaround to the
-  Antigravity install instructions. Upstream:
+- Add the `alteryx-asset-discovery` skill: a read-only workflow for finding and
+  verifying existing Alteryx assets and governed datasets before designing or
+  building a solution.
+- Add the `alteryx-insights` skill for answering business data questions with
+  the Alteryx One Insights toolset, powered by Alteryx Auto Insights — totals,
+  trends, period-over-period change, goal variance, correlations, outliers,
+  and record-level lookups over governed datasets.
+- Support cloud mode in the `alteryx-designer` skill via the `alteryx` HTTP MCP
+  server, alongside the existing local `alteryx-local` mode, and document how to
+  choose between them by available capability rather than by server name.
+- Document Alteryx plugin authentication in the README.
+- Document that Antigravity does not load MCP servers from installed plugins,
+  and add the user-level `mcp_config.json` workaround to the Antigravity
+  install instructions. Upstream:
   [google-antigravity/antigravity-cli#761](https://github.com/google-antigravity/antigravity-cli/issues/761).
 - Update `alteryx/mcp_config.json` to the `serverUrl` schema for conformance
-  with `agy plugin validate`. `alteryx-local` is unchanged.
+  with `agy plugin validate`.
+- Document the Alteryx Designer 2026.2+ requirement for the `alteryx-local`
+  MCP server.
+- Treat an `AlteryxEngineCmd` exit code of 1 as `success_with_warnings` rather
+  than a failure in `Invoke-AlteryxWorkflow.ps1`, so a workflow that completes
+  with warnings no longer reports as failed.
+- Correct the `alteryx-local` MCP tool prefix to `alteryx_local__*`.
+- Document cloud asset identifier handling — extract the ID from a URN wrapper
+  rather than passing the URN — and correct the `datasets__preview_dataset`
+  parameters to the current preview contract.
 
 ## 0.2.0
 
