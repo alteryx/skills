@@ -1,0 +1,28 @@
+alteryx/skills/alteryx-designer/references/building-with-mcp.md
+  h_de731ef134bbdb 24,28,32,36,38,45
+  s_bf9f9ab7807df7::t_e176cd73f62fb7 30
+alteryx/skills/alteryx-designer/SKILL.md
+  h_de731ef134bbdb 12-17,19,36,38,42,44,46,48-53,55,57-58,66-67
+  s_bf9f9ab7807df7::t_bb7adfc2e7d511 29,71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e443bc1b407d338982382827aac48695856a623d",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  },
+  "sessions": {
+    "s_bf9f9ab7807df7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2f916935-5011-48e2-b505-4452cd5b1228",
+        "model": "unknown"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
