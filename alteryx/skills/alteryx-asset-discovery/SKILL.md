@@ -21,9 +21,9 @@ Search governed assets whenever the relevant MCP tools are available, even for a
 
 1. **Frame the need.** Extract the business objective, domain terms, expected inputs and outputs, time range, geography, system names, and other constraints worth searching on. Establish which environments are in play: local files, cloud, or both.
 2. **Search broadly.** Search governed cloud assets, local files, or both, depending on which environments are in play and the scope of the request.
-3. **Inspect candidates.** Never rely on names or search snippets alone. Establish a workflow's or macro's analytical purpose, inputs, outputs, transformations, and referenced assets, and verify a dataset's column names and types before presenting it as grounded context.
+3. **Inspect candidates.** Establish a workflow's or macro's analytical purpose, inputs, outputs, transformations, and referenced assets, and verify a dataset's column names and types before presenting it as grounded context.
 4. **Use workflows as discovery evidence.** Treat workflow Input and Output tools as pointers to canonical datasets, and referenced macros as reusable-logic candidates. Follow them to assets that did not match the original query.
-5. **Refine and repeat.** Re-search using names, business concepts, owners, tags, and tool usage learned during inspection — but only when it could materially improve the candidate set.
+5. **Refine and repeat.** Re-search using names, business concepts, owners, tags, and tool usage learned during inspection.
 6. **Return grounded candidates.** Report what was found, why each candidate is relevant, what was verified, and every gap.
 
 ## Cloud Discovery
@@ -32,23 +32,9 @@ Use the read-only tools below through the `alteryx` MCP server. Client prefixes 
 
 | Tool                                            | When to use it                                                 | Required handling                                                     |
 |-------------------------------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
-| `assets__search_alteryx_assets(query)`          | Search governed assets with a focused natural-language query.  | Treat results as candidates, not verified facts.                      |
+| `assets__search_alteryx_assets(query)`          | Search governed assets with a focused natural-language query.  | Treat results as candidates, not verified facts; extract IDs carefully. Follow the required handling in the tool's own description for the specifics (URN extraction, refinement discipline). |
 | `designer__get_condensed_workflow(workflow_id)` | Inspect a cloud workflow or macro.                             | This is the evidence that verifies a workflow candidate.              |
 | `datasets__preview_dataset(datasetId, limit)`   | Verify a governed dataset's schema and inspect a small sample. | Pass the dataset ID in the current preview contract; respect returned limits and never use repeated previews to bulk-extract. |
-
-### Cloud asset identifiers
-
-Search results may identify cloud assets with URNs or other wrappers, for example
-`urn:li:ayxDataset:(workspaceId,datasetId)`. Do not pass a full URN directly to
-a follow-on tool. Extract the asset ID required by that tool and pass it in the
-documented parameter, preserving the ID exactly. Remove only a recognized
-wrapper; do not guess or otherwise transform the ID.
-
-For example, a dataset preview passes the `datasetId` component:
-
-```json
-{"datasetId":"<datasetId>","limit":5}
-```
 
 Translate the business question into focused searches rather than broad ones. Search relevance depends on the metadata indexed for each asset, so an asset with thin metadata may only be findable by name or path — try both.
 
@@ -75,7 +61,7 @@ These counts are tunable defaults, not protocol. When a bound stops the work, re
 ## Reporting Rules
 
 - **Surface reuse candidacy.** When an inspected asset appears to already fulfill the stated need in whole or in part, say so explicitly and cite the evidence. Do not decide whether to reuse, extend, or replace it at this stage — but never return a strong candidate without flagging that it may make new work unnecessary. Avoiding duplicated business logic is the primary reason to perform discovery.
-- **Report empty results as searched, not absent.** Asset search returns only what the user has access to, so finding nothing does not establish that nothing exists. State which locations, asset types, and terms were searched, and offer the terms or locations most likely to change the outcome.
+- **Report empty results as searched, not absent.** State which locations, asset types, and terms were searched, and offer the terms or locations most likely to change the outcome.
 - **Keep evidence and inference separate.** Distinguish what was observed in metadata, workflow content, schemas, or samples from what you inferred.
 
 A candidate is **verified** only when the evidence below was actually obtained. Everything else is unverified, however strong the search relevance was. Search metadata alone never verifies a candidate.
