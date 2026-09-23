@@ -185,6 +185,10 @@ Preserve root execution settings, AMP/E2 engine-selection settings, layout setti
 
 Workflow identity and telemetry fields can include `WorkflowId`, `Telemetry`, `PreviousWorkflowId`, and `OriginWorkflowId`. Do not rewrite them during unrelated edits.
 
+### Canvas Layout
+
+New workflows must include `<LayoutType>Horizontal</LayoutType>` under root `Properties` unless the user asks for vertical; Designer renders files without it as `Vertical`. Preserve `LayoutType` in existing workflows.
+
 ## AMP/E2 Engine Selection
 
 Alteryx workflows can run through the AMP/E2 engine path or the legacy E1 path. AMP/E2 is the default for newly created workflows in this skill unless the user explicitly asks for legacy E1. Some tools are supported only on AMP/E2, and AMP/E2 generally has better performance, but there are minor behavioral differences between AMP/E2 and E1.
@@ -446,5 +450,6 @@ After editing:
 - Existing workflows keep the same effective AMP/E2 vs legacy E1 engine path unless the user explicitly confirmed a change.
 - E1 workflows do not contain duplicate non-empty tool annotation `Name` values introduced by the edit.
 - Root metadata, telemetry, events, layout settings, annotations, and cached `MetaInfo` are preserved unless intentionally changed.
+- New workflows declare `<LayoutType>Horizontal</LayoutType>`; existing workflows keep their `LayoutType`.
 - Containers and nested containers keep intended `ChildNodes`, geometry, disabled/folded state, style, captions, plugin naming style, and engine settings.
 - The workflow has been run with Engine when execution validation is in scope.

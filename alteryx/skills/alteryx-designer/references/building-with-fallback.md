@@ -30,6 +30,7 @@ The scripts try explicit arguments, environment variables, registry keys, Window
 
 - Prefer known-good XML copied from local installed evidence over invented tool XML.
 - Use unique tool IDs when adding tools. Treat IDs as document-wide, including nodes inside `ChildNodes`.
+- Set `<LayoutType>Horizontal</LayoutType>` in new workflows unless the user specifically requests vertical layout.
 - Keep graph edges in root `Connections`; nested containers do not create separate connection namespaces.
 - Update connections, runtime properties, questions, actions, constants, wizard fields, metadata references, and action destination paths consistently when adding, removing, renumbering, or rewiring tools.
 - Preserve connection names, wireless flags, root properties, workflow identity and telemetry, events, annotations, layout, and cached metadata unless the request requires changing them.
