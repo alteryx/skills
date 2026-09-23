@@ -1,0 +1,14 @@
+alteryx/skills/alteryx-designer/SKILL.md
+  h_de731ef134bbdb 14,26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "d8e269d9d435f8904a6aade6499e57cfa27a044f",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
