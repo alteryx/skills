@@ -1,0 +1,16 @@
+alteryx/skills/alteryx-designer/references/workflow-xml.md
+  h_de731ef134bbdb 190
+alteryx/skills/alteryx-designer/references/building-with-fallback.md
+  h_de731ef134bbdb 33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "3671493123a9b5cbc03d8b605720862187ecbc69",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
