@@ -11,7 +11,7 @@ Use this skill to build and validate Alteryx workflows locally or in the cloud. 
 
 1. Establish the target, its inputs, expected outputs, and artifact type.
 2. Identify the target's environment from the user's request. If the request is unclear, try in this order:
-   1. Local mode if `alteryx_local__*` tools available
+   1. Local mode if `alteryx_local__*` or `designer_local__*` tools available
    2. Cloud mode if `designer__*` tools available
    3. Local fallback mode ONLY if neither MCP toolsets are available and functional
 3. Read the build-mode specific guidance. Both Local and cloud mode are documented at `references/building-with-mcp.md`. Fallback mode is documented at `references/building-with-fallback.md`.
@@ -23,7 +23,7 @@ You may also use fallback mode for `.yxwz` or custom constructs when MCP does no
 | Concern            | Local mode                                 | Cloud mode                   |
 |--------------------|--------------------------------------------|------------------------------|
 | Target identifier  | `file_path` (absolute)                     | `workflow_id`                |
-| Workflow tools     | `alteryx_local__*`                         | `designer__*`, `formulas__*` |
+| Workflow tools     | `alteryx_local__*` / `designer_local__*`   | `designer__*`, `formulas__*` |
 | Durable state      | The local `.yxmd` / `.yxmc` / `.yxwz` file | Alteryx One workflow storage |
 | Input/output data  | Direct reference or governed datasets      | Governed datasets only       |
 | MCP server         | `alteryx-local` (Designer 2026.2+)         | `alteryx`                    |
