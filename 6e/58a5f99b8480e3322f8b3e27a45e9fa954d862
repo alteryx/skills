@@ -1,0 +1,27 @@
+alteryx/skills/alteryx-designer/references/workflow-xml.md
+  s_225bff40141a6f::t_0060c23ed5d0cf 453
+  s_225bff40141a6f::t_5923ac9c254032 190
+alteryx/skills/alteryx-designer/references/building-with-fallback.md
+  s_225bff40141a6f::t_eed585341dee88 33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6e58a5f99b8480e3322f8b3e27a45e9fa954d862",
+  "prompts": {},
+  "humans": {
+    "h_de731ef134bbdb": {
+      "author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  },
+  "sessions": {
+    "s_225bff40141a6f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "51833952-d631-4ae4-8c8e-3325b723fef6",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jonathan Lounsbury <jonathan.lounsbury@alteryx.com>"
+    }
+  }
+}
