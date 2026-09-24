@@ -1,5 +1,19 @@
 # alteryx-skills
 
+## 0.3.1
+
+- Recognize `designer_local__*` tools as the local-mode toolset in the
+  `alteryx-designer` skill, alongside `alteryx_local__*`.
+- Default workflows created in the `alteryx-designer` fallback mode to
+  horizontal canvas layout (`<LayoutType>Horizontal</LayoutType>`) unless the
+  user asks for vertical, and preserve `LayoutType` in existing workflows.
+- Simplify the `alteryx-designer` skill guidance: a shorter execution-path
+  selection order (local MCP, then cloud MCP, then local fallback), a condensed
+  build loop and build rules, and a trimmed MCP reference.
+- Remove Asset Search handling notes from the `alteryx-asset-discovery` skill
+  that are now covered by the search tool's own description, including cloud
+  asset URN extraction.
+
 ## 0.3.0
 
 - Add the `alteryx-asset-discovery` skill: a read-only workflow for finding and
