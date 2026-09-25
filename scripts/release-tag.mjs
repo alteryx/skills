@@ -48,9 +48,10 @@ if (dirty.length > 0) {
 
 run("git", ["tag", tagName], { stdio: "inherit" });
 
-console.log(`Created ${tagName}. Push it to the canonical repo and the mirror:`);
-console.log(`  git push origin ${tagName}`);
-console.log(`  git push github ${tagName}`);
+console.log(`Created ${tagName}. After verifying the public diff and remote refs, push:`);
+console.log(`  git push origin refs/tags/${tagName}:refs/tags/${tagName}`);
+console.log("  git push github HEAD:refs/heads/main");
+console.log(`  git push github refs/tags/${tagName}:refs/tags/${tagName}`);
 console.log(
   "The GitHub Release is created automatically by github-release.yml once the tag lands on the mirror."
 );
