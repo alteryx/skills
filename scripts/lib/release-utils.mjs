@@ -31,7 +31,8 @@ export function writeJson(relativePath, data) {
 }
 
 export function assertSemver(version, label = "version") {
-  if (!/^\d+\.\d+\.\d+$/.test(version)) {
+  if (typeof version !== "string" ||
+      !/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/.test(version)) {
     throw new Error(`${label} must be an exact semver version, got ${version}`);
   }
 }
@@ -83,7 +84,7 @@ export function extractChangelogSection(version) {
   const changelogPath = resolveRepoPath("CHANGELOG.md");
   const changelog = fs.readFileSync(changelogPath, "utf8");
   const headingPattern = new RegExp(
-    `^##\\s+(?:\\[)?${escapeRegExp(version)}(?:\\])?(?:\\s|$).*`,
+    `^##\\s+(?:\\[)?${escapeRegExp(version)}(?:\\]|\\s|$).*`,
     "m"
   );
   const headingMatch = changelog.match(headingPattern);
