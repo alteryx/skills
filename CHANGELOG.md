@@ -1,5 +1,14 @@
 # alteryx-skills
 
+## 0.3.2
+
+- Add `alteryx/README.md`, `alteryx/LICENSE` and `alteryx/NOTICE` so the plugin
+  folder carries its own listing text and license for plugin directories.
+- Limit the `alteryx` remote server to the toolsets the skills use
+  (`insights`, `assets`, `designer`, `datasets`, `formulas` and `knowledge`).
+  Remove the `toolsets` query parameter to expose every toolset again.
+- Gate release publication on the merged version (TCP-6346).
+
 ## 0.3.1
 
 - Recognize `designer_local__*` tools as the local-mode toolset in the
