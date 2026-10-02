@@ -1,5 +1,11 @@
 # alteryx-skills
 
+## 0.3.3
+
+- Add a PNG icon and a privacy policy URL to the Claude plugin manifest folder,
+  as the Claude plugin directory requires, and mirror the display name, homepage,
+  license and keywords that the Codex manifest already carries.
+
 ## 0.3.2
 
 - Add `alteryx/README.md`, `alteryx/LICENSE` and `alteryx/NOTICE` so the plugin
