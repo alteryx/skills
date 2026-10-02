@@ -5,6 +5,6 @@
   },
   "alteryx": {
     "type": "http",
-    "url": "https://us1.alteryxcloud.com/mcp/v1"
+    "url": "https://us1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,formulas,knowledge"
   }
 }

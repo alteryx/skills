@@ -5,7 +5,7 @@
       "args": []
     },
     "alteryx": {
-      "serverUrl": "https://us1.alteryxcloud.com/mcp/v1"
+      "serverUrl": "https://us1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,formulas,knowledge"
     }
   }
 }

@@ -48,7 +48,7 @@ the file:
 {
   "mcpServers": {
     "alteryx": {
-      "serverUrl": "https://us1.alteryxcloud.com/mcp/v1"
+      "serverUrl": "https://us1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,formulas,knowledge"
     }
   }
 }
@@ -226,10 +226,10 @@ The full plugin configures two optional MCP servers.
 alteryx-mcp-server
 ```
 
-`alteryx` connects over HTTP to Alteryx One and exposes the Insights analysis, cloud workflow, asset search, and dataset preview tools:
+`alteryx` connects over HTTP to Alteryx One and exposes the Insights analysis, cloud workflow, asset search, and dataset preview tools. The `toolsets` query parameter limits the server to the toolsets the skills use; remove it to expose every toolset your workspace offers:
 
 ```text
-https://us1.alteryxcloud.com/mcp/v1
+https://us1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,formulas,knowledge
 ```
 
 ### Set Your Regional Endpoint
@@ -238,9 +238,9 @@ Alteryx One is hosted in three regions, and the plugin ships the United States e
 
 | Region               | Endpoint                              |
 |----------------------|---------------------------------------|
-| United States        | `https://us1.alteryxcloud.com/mcp/v1` |
-| Europe / Middle East | `https://eu1.alteryxcloud.com/mcp/v1` |
-| Asia Pacific         | `https://au1.alteryxcloud.com/mcp/v1` |
+| United States        | `https://us1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,formulas,knowledge` |
+| Europe / Middle East | `https://eu1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,formulas,knowledge` |
+| Asia Pacific         | `https://au1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,formulas,knowledge` |
 
 There is no global endpoint. A single shared host would route requests through infrastructure outside the caller's region, which some data-residency commitments do not permit. The endpoint must therefore match your workspace's region, and no client can pick it for you.
 
@@ -251,7 +251,7 @@ client:
 - Antigravity — set `serverUrl` in your user-level `mcp_config.json` (see [Antigravity](#antigravity) under Installation). Editing the plugin's bundled `alteryx/mcp_config.json` has no effect, since Antigravity doesn't read it — see [Known Issues](#antigravity-does-not-load-plugin-provided-mcp-servers). Restart `agy` after changing it.
 
 Claude Code and Claude Desktop also support `${VAR}` and `${VAR:-default}` expansion in an MCP server `url`, so you can make the edit once as
-`"url": "${ALTERYX_MCP_URL:-https://us1.alteryxcloud.com/mcp/v1}"` and set `ALTERYX_MCP_URL` in your environment. The bundled configuration does not use expansion, because Codex reads the same file and does not support that syntax.
+`"url": "${ALTERYX_MCP_URL:-https://us1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,formulas,knowledge}"` and set `ALTERYX_MCP_URL` in your environment. The bundled configuration does not use expansion, because Codex reads the same file and does not support that syntax.
 
 If you define your own regional `alteryx` server instead of editing the bundled one, expect both to appear: Claude Code matches plugin-provided servers by endpoint, so a different URL registers as an additional server rather than replacing the bundled US entry.
 
