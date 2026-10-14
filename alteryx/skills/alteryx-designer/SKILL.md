@@ -23,7 +23,7 @@ You may also use fallback mode for `.yxwz` or custom constructs when MCP does no
 | Concern            | Local mode                                 | Cloud mode                   |
 |--------------------|--------------------------------------------|------------------------------|
 | Target identifier  | `file_path` (absolute)                     | `workflow_id`                |
-| Workflow tools     | `alteryx_local__*` / `designer_local__*`   | `designer__*`, `formulas__*` |
+| Workflow tools     | `alteryx_local__*` / `designer_local__*`   | `designer__*`                |
 | Durable state      | The local `.yxmd` / `.yxmc` / `.yxwz` file | Alteryx One workflow storage |
 | Input/output data  | Direct reference or governed datasets      | Governed datasets only       |
 | MCP server         | `alteryx-local` (Designer 2026.2+)         | `alteryx`                    |
