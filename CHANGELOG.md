@@ -1,5 +1,12 @@
 # alteryx-skills
 
+## 0.3.4
+
+- Stop requesting the `formulas` toolset now that formula validation is part
+  of the `designer` toolset (TCP-7016).
+- Describe all three skills in the Claude plugin description, adding the
+  Alteryx Auto Insights capability.
+
 ## 0.3.3
 
 - Add a PNG icon and a privacy policy URL to the Claude plugin manifest folder,
