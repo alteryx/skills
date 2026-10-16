@@ -1,8 +1,8 @@
 {
   "name": "alteryx",
   "displayName": "Alteryx",
-  "description": "AI-assisted Alteryx asset discovery, workflow authoring, and execution for governed, repeatable business analysis.",
-  "version": "0.3.3",
+  "description": "Find Alteryx assets, answer business questions with Alteryx Auto Insights, and build and run workflows for governed, repeatable business analysis.",
+  "version": "0.3.4",
   "author": {
     "name": "Alteryx"
   },
