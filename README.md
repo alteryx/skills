@@ -48,7 +48,7 @@ the file:
 {
   "mcpServers": {
     "alteryx": {
-      "serverUrl": "https://us1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,knowledge"
+      "serverUrl": "https://us1.alteryxcloud.com/mcp/v1?profile=antigravity"
     }
   }
 }
@@ -226,11 +226,13 @@ The full plugin configures two optional MCP servers.
 alteryx-mcp-server
 ```
 
-`alteryx` connects over HTTP to Alteryx One and exposes the Insights analysis, cloud workflow, asset search, and dataset preview tools. The `toolsets` query parameter limits the server to the toolsets the skills use; remove it to expose every toolset your workspace offers:
+`alteryx` connects over HTTP to Alteryx One and exposes the Insights analysis, cloud workflow, asset search, and dataset preview tools. The `profile` query parameter limits the server to the toolsets the skills use, and Alteryx keeps that list up to date:
 
 ```text
-https://us1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,knowledge
+https://us1.alteryxcloud.com/mcp/v1?profile=claude
 ```
+
+To pick toolsets yourself, use the `toolsets` query parameter, a comma-separated list of toolset names. Use it in place of `profile` to choose from every toolset your workspace offers, as in `?toolsets=insights,assets`, or add it to `profile` to narrow the profile's list, as in `?profile=claude&toolsets=insights`. A list you set yourself doesn't change when the skills' needs do. Remove both parameters to expose every toolset your workspace offers.
 
 ### Set Your Regional Endpoint
 
@@ -238,20 +240,20 @@ Alteryx One is hosted in three regions, and the plugin ships the United States e
 
 | Region               | Endpoint                              |
 |----------------------|---------------------------------------|
-| United States        | `https://us1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,knowledge` |
-| Europe / Middle East | `https://eu1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,knowledge` |
-| Asia Pacific         | `https://au1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,knowledge` |
+| United States        | `https://us1.alteryxcloud.com/mcp/v1` |
+| Europe / Middle East | `https://eu1.alteryxcloud.com/mcp/v1` |
+| Asia Pacific         | `https://au1.alteryxcloud.com/mcp/v1` |
 
 There is no global endpoint. A single shared host would route requests through infrastructure outside the caller's region, which some data-residency commitments do not permit. The endpoint must therefore match your workspace's region, and no client can pick it for you.
 
 To change it, replace `us1` with `eu1` or `au1` in the endpoint used by your
-client:
+client, and keep its `profile` parameter:
 
 - `alteryx/.mcp.json`, field `url` — Codex, Claude Code, and Claude Desktop. Restart your client, or reload plugins, so it reconnects. Re-apply the edit after upgrading the plugin, because an upgrade replaces the bundled configuration file.
 - Antigravity — set `serverUrl` in your user-level `mcp_config.json` (see [Antigravity](#antigravity) under Installation). Editing the plugin's bundled `alteryx/mcp_config.json` has no effect, since Antigravity doesn't read it — see [Known Issues](#antigravity-does-not-load-plugin-provided-mcp-servers). Restart `agy` after changing it.
 
 Claude Code and Claude Desktop also support `${VAR}` and `${VAR:-default}` expansion in an MCP server `url`, so you can make the edit once as
-`"url": "${ALTERYX_MCP_URL:-https://us1.alteryxcloud.com/mcp/v1?toolsets=insights,assets,designer,datasets,knowledge}"` and set `ALTERYX_MCP_URL` in your environment. The bundled configuration does not use expansion, because Codex reads the same file and does not support that syntax.
+`"url": "${ALTERYX_MCP_URL:-https://us1.alteryxcloud.com/mcp/v1?profile=claude}"` and set `ALTERYX_MCP_URL` in your environment. The bundled configuration does not use expansion, because Codex reads the same file and does not support that syntax.
 
 If you define your own regional `alteryx` server instead of editing the bundled one, expect both to appear: Claude Code matches plugin-provided servers by endpoint, so a different URL registers as an additional server rather than replacing the bundled US entry.
 
