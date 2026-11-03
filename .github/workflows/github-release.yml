@@ -32,6 +32,23 @@ jobs:
           version="${GITHUB_REF_NAME#v}"
           node scripts/extract-release-notes.mjs "$version" > release-notes.md
 
+      # One ZIP per skill, with SKILL.md at the archive root, for clients that
+      # take a single uploaded skill (such as Microsoft Copilot Studio).
+      - name: Package skills
+        shell: bash
+        run: |
+          package_dir="$RUNNER_TEMP/skill-packages"
+          mkdir -p "$package_dir"
+          for skill_dir in alteryx/skills/*/; do
+            skill="$(basename "$skill_dir")"
+            if [[ ! -f "$skill_dir/SKILL.md" ]]; then
+              echo "Expected $skill_dir to contain SKILL.md."
+              exit 1
+            fi
+            (cd "$skill_dir" && zip -r -X -q "$package_dir/$skill.zip" .)
+          done
+          ls -l "$package_dir"
+
       - name: Create or update GitHub Release
         shell: bash
         env:
@@ -47,3 +64,9 @@ jobs:
               --notes-file release-notes.md \
               --verify-tag
           fi
+
+      - name: Attach skill packages
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "$GITHUB_REF_NAME" "$RUNNER_TEMP"/skill-packages/*.zip --clobber
