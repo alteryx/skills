@@ -1,5 +1,17 @@
 # alteryx-skills
 
+## 0.4.0
+
+- Select the remote server's toolsets with a client profile instead of a fixed
+  `toolsets` list. The bundled URLs are now
+  `https://us1.alteryxcloud.com/mcp/v1?profile=claude` for Claude Code, Claude
+  Desktop, and Codex, and `?profile=antigravity` for Antigravity. Alteryx keeps
+  each profile's toolset list current, so the plugin no longer needs a release
+  when the skills' toolsets change. `toolsets` still works on its own or to
+  narrow a profile (TGAT-2669).
+- Attach a ZIP of each skill to GitHub releases, for clients that take a single
+  uploaded skill such as Microsoft Copilot Studio (TGAT-2517).
+
 ## 0.3.4
 
 - Stop requesting the `formulas` toolset now that formula validation is part
