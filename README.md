@@ -218,13 +218,7 @@ Use `/alteryx:<skill>` to invoke a skill:
 
 ## Runtime Requirements
 
-The full plugin configures two optional MCP servers.
-
-`alteryx-local` runs on your machine and exposes local workflow tools (requires Alteryx Designer 2026.2 or newer):
-
-```powershell
-alteryx-mcp-server
-```
+The plugin configures one MCP server, `alteryx`, and starts no program on your machine.
 
 `alteryx` connects over HTTP to Alteryx One and exposes the Insights analysis, cloud workflow, asset search, and dataset preview tools. The `profile` query parameter limits the server to the toolsets the skills use, and Alteryx keeps that list up to date:
 
@@ -233,6 +227,27 @@ https://us1.alteryxcloud.com/mcp/v1?profile=claude
 ```
 
 To pick toolsets yourself, use the `toolsets` query parameter, a comma-separated list of toolset names. Use it in place of `profile` to choose from every toolset your workspace offers, as in `?toolsets=insights,assets`, or add it to `profile` to narrow the profile's list, as in `?profile=claude&toolsets=insights`. A list you set yourself doesn't change when the skills' needs do. Remove both parameters to expose every toolset your workspace offers.
+
+`alteryx-local` is optional and exposes local workflow tools. It is `alteryx-mcp-server`, which Alteryx Designer 2026.2 or newer installs on your machine; the plugin does not add it for you. Add it yourself. In Claude Code:
+
+```text
+claude mcp add alteryx-local -- alteryx-mcp-server
+```
+
+In Codex:
+
+```text
+codex mcp add alteryx-local -- alteryx-mcp-server
+```
+
+In Antigravity, add it next to `alteryx` in your user-level `mcp_config.json` (file locations under [Antigravity](#antigravity)):
+
+```json
+"alteryx-local": {
+  "command": "alteryx-mcp-server",
+  "args": []
+}
+```
 
 ### Set Your Regional Endpoint
 

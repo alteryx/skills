@@ -30,13 +30,14 @@ workflow definitions in them, to your Alteryx One workspace through the
 Alteryx MCP gateway (`alteryx`, HTTPS). Sign-in uses OAuth, and the plugin
 never sees your password. It stores nothing itself and ships no credentials.
 
-The plugin also declares a second server, `alteryx-local`. It is a program that
-runs on your own computer, inside Alteryx Designer 2026.2 or newer, and it only
-starts in clients that run programs locally: Claude Code, Codex, Antigravity
-and Cowork. claude.ai, Claude Desktop chat and ChatGPT do not start it. The
-Alteryx Designer skill also bundles PowerShell scripts that run a workflow with
-a local Designer install. Those scripts run only when one of those local
-clients executes them on a Windows machine with Designer installed.
+The plugin starts no program on your computer. Alteryx Designer 2026.2 or
+newer ships its own local MCP server, `alteryx-mcp-server`; if you add it to a
+client that runs programs locally, such as Claude Code, Cowork, Codex or
+Antigravity, as a server named `alteryx-local`, the Alteryx Designer skill
+builds and runs workflows on your machine through it. The repository README
+shows how. The Alteryx Designer skill also bundles PowerShell scripts that run
+a workflow with a local Designer install. Those scripts run only when such a
+client executes them on a Windows machine with Designer installed.
 
 ## Support
 
