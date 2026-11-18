@@ -1,5 +1,15 @@
 # alteryx-skills
 
+## 0.5.0
+
+- Remove the `alteryx-local` server from the plugin's MCP configuration and the
+  Antigravity config. Anthropic's directory accepts a plugin that starts a
+  local MCP server only from Verified organizations. To keep the local
+  workflow tools, add Designer's `alteryx-mcp-server` to your client yourself
+  (`claude mcp add alteryx-local -- alteryx-mcp-server`); the README shows the
+  command for each client (TGAT-2754).
+- Add the plugin icon to the Claude listing manifest.
+
 ## 0.4.0
 
 - Select the remote server's toolsets with a client profile instead of a fixed
