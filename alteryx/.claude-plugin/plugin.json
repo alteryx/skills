@@ -2,7 +2,7 @@
   "name": "alteryx",
   "displayName": "Alteryx",
   "description": "Find Alteryx assets, answer business questions with Alteryx Auto Insights, and build and run workflows for governed, repeatable business analysis.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "icon": "./.claude-plugin/icon.png",
   "author": {
     "name": "Alteryx"
