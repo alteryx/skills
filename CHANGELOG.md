@@ -1,5 +1,13 @@
 # alteryx-skills
 
+## 0.5.1
+
+- The Designer skill's fallback guide uses the PowerShell helper scripts when
+  they are present, and otherwise runs the same Designer discovery and Engine
+  steps directly in PowerShell. Installs from Anthropic's plugin directory come
+  from the `directory` branch, which leaves out the scripts because the
+  directory accepts scripts only from Verified organizations (TGAT-2754).
+
 ## 0.5.0
 
 - Remove the `alteryx-local` server from the plugin's MCP configuration and the
